@@ -12,7 +12,7 @@
 | [![github - BarryKim34](https://img.shields.io/badge/BarryKim34-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/BarryKim34) | [![github - jia11234](https://img.shields.io/badge/jia11234-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jia11234) | [![github - areum117](https://img.shields.io/badge/areum117-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/areum117) | [![github - gugu_eightyone](https://img.shields.io/badge/gugu_eightyone-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gugu-eightyone) | [![github - lifeisgoodlg](https://img.shields.io/badge/lifeisgoodlg-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/lifeisgoodlg) |
 <!-- prettier-ignore-end -->
 
-## 🎵음악 선택에 영향을 주는 요소 탐색
+## 🎵 음악 선택에 영향을 주는 요소 탐색
 
 ### 주제 선정 이유
 - **음악적 특성**
@@ -46,19 +46,19 @@
 ---
 
 ## WBS
-- 이미지 넣기
+![wbs](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/wbs.png)
 ---
 
 ## 데이터 수집
 
 ### **출처**
 
-- Spotify
+- Spotify https://www.spotify.com/kr-ko/premium/
 - iTunes Search API
 ```
 GET | https://itunes.apple.com/search?term={query}&entity=song&limit=1
 ```
-- Youtube
+- YouTube https://www.youtube.com
 - 날씨데이터 https://www.weatheri.co.kr/
 
 ### Spotify 일별 차트
@@ -102,52 +102,80 @@ GET | https://itunes.apple.com/search?term={query}&entity=song&limit=1
 ---
 
 ## 파이썬 라이브러리
-<img width="320" height="131" alt="image" src="https://github.com/user-attachments/assets/1fc2d478-0768-49d3-a07e-fb46c750d3ba" />
+<a href="https://librosa.org/doc/latest/index.html">
+  <img width="320" height="131" alt="image" src="https://github.com/user-attachments/assets/1fc2d478-0768-49d3-a07e-fb46c750d3ba" />
+</a>
 
-### 오디오 신호를 분석해 (숫자데이터)음향 특징을 추출하는 파이썬 라이브러리다.
-<img width="456" height="143" alt="image" src="https://github.com/user-attachments/assets/ccfe0d00-9c56-4bd7-a28c-29ee76c71410" />
+### 오디오 신호를 분석해 음향 특징을 추출하는 파이썬 라이브러리이다.
+<a href="https://github.com/pytube/pytube">
+  <img width="456" height="143" alt="image" src="https://github.com/user-attachments/assets/ccfe0d00-9c56-4bd7-a28c-29ee76c71410" />
+</a>
 
-### YouTube 영상을 다운로드할 수 있게 하는 라이브러리이다.(에프에프엠펙)
+### YouTube 영상을 다운로드할 수 있게 하는 라이브러리이다.
 
 ---
 
 ## 그래프로 상관관계 분석
 ### 곡의 음향 특징과 날씨의 상관관계
-이미지 넣기
+![weather](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/w_heatmap.png)
 ### 가장 연관이 없는 것은 템포와 temp_avg(기온 평균), DI(불쾌지수)이다.
-### 가장 연관이 있는 것은 DI(불쾨지수)과 temp_avg(기온 평균)은 각각 mean_mel(에너지 평균), mean_zcr(거칠기 평균), mean_centroid(밝기 평균)이다.
+### 가장 연관이 있는 것은 DI(불쾌지수)과 temp_avg(기온 평균)은 각각 mean_mel(에너지 평균), mean_zcr(거칠기 평균), mean_centroid(밝기 평균)이다.
 
 ### 기온과 템포의 상관관계
-이미지 넣기 2개
+![temp2](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/tempo.png)
+![temp](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/t_heatmap.png)
 ### 기온과 템포는 역의 추세가 보인다.
 
 ### 계절별 키워드와 스트리밍 수의 상관관계
-봄
+![spring](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/k_spring.png)
 ```
 '봄', 'spring', '벚꽃', 'blossom'
 ```
 ### 벚꽃시즌일 때 키워드와 관련된 스트리밍 수가 증가했다.
-여름
+
+![summer](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/k_summer.png)
 ```
 'summer', '여름', '바다', 'cool', '시원'
 ```
 ### 여름의 키워드가 국한되지 않기 때문에 유의미한 상관관계가 없었다.
-겨울
+
+![winter](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/k_winter.png)
 ```
 christmas', '크리스마스', 'snow', '눈
 ```
-### 크리스마스가 있어 키워드와 관련된 스트리밍수가 증가헀다.
+### 크리스마스가 있어 키워드와 관련된 스트리밍 수가 증가헀다.
 
-### 음악 밝기 수와 온도의 상관관계
-이미지
+### 음악 밝기 수와 기온의 상관관계
+
+![bright](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/Brightness.png)
 ### 여름 시기에 음악 밝기 수가 증가했다.
-
-### 분기별 인기있었던 노래 제목
+---
+## 분기별 인기 있었던 노래 제목
 ### 1분기 (1월 ~ 3월)
-이미지
+![q1](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/Q1_wordcloud.png)
 ### 2분기 (4월 ~ 6월)
-이미지
+![q2](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/Q2_wordcloud.png)
 ### 3분기 (7월 ~ 9월)
-이미지
+![q3](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/Q3_wordcloud.png)
 ### 4분기 (10월 ~ 12월)
-이미지
+![q4](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/Q4_wordcloud.png)
+---
+## 결론 
+### 음악선택에 영향을 주는 요소들은 계절, 기온과 관련이 있다는 걸을 확인했습니다.
+---
+## 회고록
+- `김현수`</br>
+
+- `류지우` </br>
+라이브러리를 활용해 다양한 음향 특성을 추출하며 많은 데이터를 분석할 수 있었고 이 과정에서 실제 상관관계를 증명하는 과정이 재미있었다.  
+다만 스포티파이와 iTunes에서 가져온 곡 제목과 아티스트가 영어로 되어 있고 장르가 세분화되어 있지 않아 다양하고 밀접한 연관성을 충분히 뽑아내지 못한 점은 아쉬웠다.
+- `조아름`</br>
+
+- `진세형`</br>
+
+- `최현진`</br>
+개인 일정으로 프로젝트 기간에 적극적으로 참여하지 못해 아쉬웠습니다.
+최종 결과물을 보면서 음악의 템포를 활용하고
+차트 데이터를 날씨나 계절 같은 환경 요인과 연관 지어 분석한다는 접근이 흥미로웠으며,
+실제로 일부 영향이 있다는 점이 인상적이었습니다.
+
