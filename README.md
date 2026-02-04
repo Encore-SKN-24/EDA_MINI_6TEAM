@@ -118,8 +118,8 @@ GET | https://itunes.apple.com/search?term={query}&entity=song&limit=1
 ## 그래프로 상관관계 분석
 ### 곡의 음향 특징과 날씨의 상관관계
 ![weather](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/w_heatmap.png)
-### 가장 연관이 없는 것은 템포와 temp_avg(기온 평균), DI(불쾌지수)이다.
-### 가장 연관이 있는 것은 DI(불쾌지수)과 temp_avg(기온 평균)은 각각 mean_mel(에너지 평균), mean_zcr(거칠기 평균), mean_centroid(밝기 평균)이다.
+### 템포와 temp_avg(기온 평균), DI(불쾌지수)는 음의 상관관계를 가진다.
+### DI(불쾌지수)과 temp_avg(기온 평균)은 각각 mean_mel(에너지 평균), mean_zcr(거칠기 평균), mean_centroid(밝기 평균)와 양의 상관관계를 가진다.
 
 ### 기온과 템포의 상관관계
 ![temp2](https://github.com/Encore-SKN-24/EDA_MINI_6TEAM/blob/main/README%20images/tempo.png)
@@ -143,7 +143,7 @@ GET | https://itunes.apple.com/search?term={query}&entity=song&limit=1
 ```
 christmas', '크리스마스', 'snow', '눈
 ```
-### 크리스마스가 있어 키워드와 관련된 스트리밍 수가 증가헀다.
+### 크리스마스가 있어 키워드와 관련된 스트리밍 수가 증가했다.
 
 ### 음악 밝기 수와 기온의 상관관계
 
